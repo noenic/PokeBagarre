@@ -45,7 +45,8 @@ class PokemonTest {
     @Test
     void EstVainqueur_Attaque_Egale_A_Attaque_Ennemi_Et_Defense_Egale_A_Defense_Ennemi() {
         var pokemon = unPokemon().avecAttaque(10).avecDefense(10).construire();
-        var ennemi = unPokemon().avecAttaque(10).avecDefense(10).construire();
+        //On ajoute une erreur pour voir si le test passe
+        var ennemi = unPokemon().avecAttaque(11).avecDefense(10).construire();
 
         assertTrue(pokemon.estVainqueurContre(ennemi));
 
